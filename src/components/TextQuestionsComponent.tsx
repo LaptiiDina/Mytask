@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components';
-import { ValueContextForForm } from '../constants/constants';
+import { ValueContextForForm } from '../config/router-config';
 import BasicTextFields from './InputsComponent';
 
 const LittleBlock = styled.div<{ propsBorder: string }>`

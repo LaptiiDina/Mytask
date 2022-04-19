@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { questionnaire } from '../constants/constants';
+import { PATH_QIESTIONS, totalCountOfQuestions } from '../config/router-config';
 import { State } from '../types';
 
 const Container = styled.div`
@@ -34,7 +34,7 @@ const FirstPage = ({ setId }: { setId: React.Dispatch<React.SetStateAction<numbe
     const createbutton = () => {
         const array = [];
 
-        for (let index = 0; index < 10; index++) {
+        for (let index = 0; index < totalCountOfQuestions; index++) {
             array.push(<StyleButton key={index} value={index + 1} onClick={(e) => {
                 setId(index + 1)
 
@@ -44,7 +44,7 @@ const FirstPage = ({ setId }: { setId: React.Dispatch<React.SetStateAction<numbe
     }
     const state = useSelector<State, State>(state => state)
     if (state.questionnaires) {
-        return <Navigate to={questionnaire} />
+        return <Navigate to={PATH_QIESTIONS} />
     }
 
     return (

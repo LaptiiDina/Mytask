@@ -6,7 +6,8 @@ import FirstPage from './components/FirstPageComponent';
 import { useDispatch } from 'react-redux';
 import Questionnaire from './components/Questionnaire';
 import { getQuestionnaireById } from './action/Actions';
-import { firsPage, questionnaire } from './constants/constants';
+import { PATH_FIRSTPAGE, PATH_QIESTIONS } from './config/router-config';
+
 
 function App() {
   const [id, setId] = useState<number>(0)
@@ -20,8 +21,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path={firsPage} element={<FirstPage setId={setId} />} />
-      <Route path={questionnaire} element={<Questionnaire />} />
+      <Route path={PATH_FIRSTPAGE} element={<FirstPage setId={setId} />} />
+      <Route path={PATH_QIESTIONS} element={<Questionnaire />} />
     </Routes>
   );
 }

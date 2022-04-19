@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { firstQuestions, thirdQuestions } from '../constants/constants';
+import { firstQuestions, thirdQuestions } from '../config/router-config';
 import { State } from '../types';
 import BasicTextFields from './InputsComponent';
 import ControlledRadioButtonsGroup from './RadioButtonComponent';

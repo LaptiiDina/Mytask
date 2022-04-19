@@ -7,7 +7,7 @@ import { logout } from '../action/Actions';
 
 import ChoiceComponent from './ChoiceComponent';
 import TextQuestionsComponent from './TextQuestionsComponent';
-import { secondQuestions, ValueContextForForm } from '../constants/constants';
+import { secondQuestions, ValueContextForForm } from '../config/router-config';
 const Container = styled.div<{ propsHeight: string }>`
 display:flex;
 position:relative;
